@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>商品一覧 | OVERHAUL</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ナビゲーション -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="index.html">
+                OVERHAUL
+            </a>
+
+            <button class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="index.html">
+                            TOP
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active" href="products.html">
+                            商品一覧
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="contact.html">
+                            お問い合わせ
+                        </a>
+
+                    </li>
+
+                    <li class="nav-item ms-2">
+
+                        <a class="btn btn-success" href="#">
+                            Instagram
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- タイトル -->
+
+    <section class="container py-5">
+
+        <h1 class="mb-4">
+
+            商品一覧
+
+        </h1>
+
+        <p class="text-muted">
+
+            中古自転車パーツ・フレーム・ホイール・完成車を掲載しています。
+
+        </p>
+
+        <!-- 検索 -->
+
+        <div class="row g-3 mb-4">
+
+            <div class="col-lg-4">
+
+                <input
+                    type="text"
+                    id="search"
+                    class="form-control"
+                    placeholder="商品名・メーカーで検索">
+
+            </div>
+
+            <div class="col-lg-2">
+
+                <select
+                    id="category"
+                    class="form-select">
+
+                    <option value="">
+
+                        カテゴリ
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="col-lg-2">
+
+                <select
+                    id="manufacturer"
+                    class="form-select">
+
+                    <option value="">
+
+                        メーカー
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="col-lg-2">
+
+                <select
+                    id="status"
+                    class="form-select">
+
+                    <option value="">
+
+                        販売状態
+
+                    </option>
+
+                    <option value="available">
+
+                        販売中
+
+                    </option>
+
+                    <option value="reserved">
+
+                        入金待ち
+
+                    </option>
+
+                    <option value="sold">
+
+                        売り切れ
+
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="col-lg-2">
+
+                <select
+                    id="sort"
+                    class="form-select">
+
+                    <option value="new">
+
+                        新着順
+
+                    </option>
+
+                    <option value="priceAsc">
+
+                        価格が安い順
+
+                    </option>
+
+                    <option value="priceDesc">
+
+                        価格が高い順
+
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- 件数表示 -->
+
+        <p class="mb-4">
+
+            <strong id="count">
+
+                0
+
+            </strong>
+
+            件の商品
+
+        </p>
+
+        <!-- 商品一覧 -->
+
+        <div
+            class="row g-4"
+            id="product-list">
+
+        </div>
+
+        <!-- ページング -->
+
+        <nav class="mt-5">
+
+            <ul
+                class="pagination justify-content-center"
+                id="pagination">
+
+            </ul>
+
+        </nav>
+
+    </section>
+
+    <!-- フッター -->
+
+    <footer class="bg-dark text-white py-4">
+
+        <div class="container text-center">
+
+            <p class="mb-2">
+
+                <a href="contact.html" class="text-white text-decoration-none">
+                    お問い合わせ
+                </a>
+
+                |
+
+                <a href="returns.html" class="text-white text-decoration-none">
+                    返品・交換について
+                </a>
+
+                |
+
+                <a href="law.html" class="text-white text-decoration-none">
+                    特定商取引法
+                </a>
+
+            </p>
+
+            <p class="mb-0">
+
+                © 2026 OVERHAUL
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="js/products.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
